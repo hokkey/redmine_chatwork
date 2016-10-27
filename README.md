@@ -29,7 +29,7 @@ An api token on posting.
 
 投稿に使用されるAPIトークンです。Redmineからの投稿は、このトークンに紐付くユーザーとしてみなされます。
 
-### ChatWork Default Room ID link (required)
+### ChatWork Default Room URL (required)
 
 A default room url of posts.
 

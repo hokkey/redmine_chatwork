@@ -1,11 +1,11 @@
 <p>
 	<label for="settings_token">ChatWork API Token</label>
-	<input type="text" id="settings_token" value="<%= settings['token'] %>" name="settings[token]"/>
+	<input type="text" id="settings_token" value="<%= settings['token'] %>" name="settings[token]" required />
 </p>
 
 <p>
-	<label for="settings_room">ChatWork Default Room ID link</label>
-	<input type="text" id="settings_room" value="<%= settings['room'] %>" name="settings[room]" placdholder="https://www.chatwork.com/#!rid0000000" />
+	<label for="settings_room">ChatWork Default Room URL</label>
+	<input type="text" id="settings_room" value="<%= settings['room'] %>" name="settings[room]" required placeholder="https://www.chatwork.com/#!rid0000000" />
 </p>
 
 <p>
