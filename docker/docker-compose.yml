@@ -16,5 +16,6 @@ redmine:
     DB_ENCODING: utf8mb4
   volumes:
     - ../src:/home/redmine/data/plugins
+    - ./log:/home/redmine/redmine/log
   ports:
     - "10083:80"
