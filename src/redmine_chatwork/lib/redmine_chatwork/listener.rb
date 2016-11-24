@@ -111,7 +111,7 @@ class ChatWorkListener < Redmine::Hook::Listener
 
     result += '[/info]'
 
-    result
+    CGI.escape result
   end
 
   private
