@@ -11,7 +11,8 @@ Slack用のプラグイン[sciyoshi/redmine-slack](https://github.com/sciyoshi/r
 
 ## Compatible with:
 
-Redmine 3.2.x
+* Redmine 3.3.x
+* Redmine 3.2.x
 
 # Installation
 
