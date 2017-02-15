@@ -75,7 +75,7 @@ class ChatWorkListener < Redmine::Hook::Listener
   end
 
   def speak(room, header, body=nil, footer=nil)
-    url = 'https://api.chatwork.com/v1/rooms/'
+    url = 'https://api.chatwork.com/v2/rooms/'
     token = Setting.plugin_redmine_chatwork[:token]
     content = create_body body, header, footer
     reqHeader = {'X-ChatWorkToken' => token}

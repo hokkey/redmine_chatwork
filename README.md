@@ -1,76 +1,69 @@
-# ChatWork plugin for Redmine
+![Redmine Chatwork](https://cloud.githubusercontent.com/assets/6197292/22987916/aab3c8b8-f3f3-11e6-9b39-8f53a53a2a42.png)
 
-This plugin posts updates to issues in your Redmine installation to the ChatWork
-room.
+# Redmine Chatwork
 
-It is based on [sciyoshi/redmine-slack](https://github.com/sciyoshi/redmine-slack).
-
-Redmineのチケットの更新・Wikiの更新をChatWorkのルームへ自動で投稿するプラグインです。
-
-Slack用のプラグイン[sciyoshi/redmine-slack](https://github.com/sciyoshi/redmine-slack)をベースにしています。
+This plugins notifies Redmine issue/wiki updates to your ChatWork room. The room can be set differently for each project by creating a custom-field named "ChatWork".
 
 ## Compatible with:
 
 * Redmine 3.3.x
 * Redmine 3.2.x
 
-# Installation
+## Installation
 
-1. Download this repository
-2. Move `src/redmine_chatwork` to your plugins directory
-4. Install `httpclient` dependency by running `bundle install` from the plugin directory
-4. Restart Redmine
-5. Config options from `Administration > Plugins > redmine_chatwork`
-  
-## Configuration／設定
+1. [Get your ChatWork API token from the authnication page](https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta_business.php).
+2. Download this repository
+3. Move `src/redmine_chatwork` to your plugins directory
+4. Install `httpclient` by running `bundle install` from the plugin directory
+5. Restart Redmine
+6. Open plugin setting: `Administration > Plugins > Redmine Chatwork`
+7. Set you API token and default room URL
+8. Create "ChatWork" and "ChatWork Disabled" project custom field (option)
 
-### ChatWork API Token (required)
+## Settings
 
-An api token on posting.
+![](https://cloud.githubusercontent.com/assets/6197292/22985457/d54cf20a-f3eb-11e6-8637-87ed17d3120d.png)
 
-投稿に使用されるAPIトークンです。Redmineからの投稿は、このトークンに紐付くユーザーとしてみなされます。
+### Changing behavior for each project
 
-### ChatWork Default Room URL (required)
+You can override the room or turn off notifications by using project custom field. The name of the custom field must be same from the example.
 
-A default room url of posts.
+![](https://cloud.githubusercontent.com/assets/6197292/22987131/209b667e-f3f1-11e6-8ce9-24305f09a1e1.png)
 
-デフォルトで投稿先となるChatWorkルームのURLをセットしてください。
+1. Create project custom fields:
+  * A "Link" field named "ChatWork"
+  * A "Boolean" field named "ChatWork Disabled"
+2. Go to the project setting which you want to override from default.
+3. Fill the "ChatWork" field to change the room to notify.
+4. Set "No" at the "ChatWork Disabled" field not to send updates.
 
-### Post Issue Updates? (option)
+## Screenshot
 
-It posts issue updates.
+![](https://cloud.githubusercontent.com/assets/6197292/22985404/aa72fb38-f3eb-11e6-8520-f855fa02c405.png)
 
-チケットの変更があるとChatWorkへ通知します。
- 
-### Post Wiki Updates? (option)
+## Changelog
 
-It posts wiki updates.
+### v0.2.0
 
-Wikiページの作成・変更をChatWorkへ通知します。
+* Change API endpoint from v1 to v2
+* Add translation files (en and ja)
 
-# Options per project／プロジェクトごとのオプション
+### v0.1.1
 
-If you define specified custom fields, you can change plugin behavior per project.
+* Fix unexpected body escaping
 
-指定された名称のカスタムフィールドを定義することで、プロジェクトごとにプラグインの挙動を変更できます。
+### v0.1.0
 
-### Override default room／デフォルトルームの上書き
+* The first release
 
-If "ChatWork" field is exists and filled, it posts to this room.
+## Author
 
-プジェクトのカスタムフィールドに「ChatWork」が定義され、そこへルームのURLが記載されている場合、
-そのプロジェクトの投稿はカスタムフィールドのルームへ変更されます。
+http://media-massage.net/profile/
 
-### Don't post any updates／全ての更新を投稿しない
+## Acknowledge
 
-If 'ChatWork Disabled' field is exists and filed with '0', it won't post any updates.
-It is good to set the custom filed as boolean type.
+This plugins is forked from [sciyoshi/redmine-slack](https://github.com/sciyoshi/redmine-slack).
 
-プロジェクトのカスタムフィールドに「ChatWork Disabled」が定義され、そこへ「0」がセットされている場合、
-そのプロジェクトの変更はChatWorkに自動投稿されません。
+## License
 
-カスタムフィールドのタイプを真偽値に設定することを推奨します。
-
-# License
-
-The MIT License (MIT)
+MIT License
