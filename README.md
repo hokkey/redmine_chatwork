@@ -62,7 +62,7 @@ http://media-massage.net/profile/
 
 ## Acknowledge
 
-This plugins is fork of [sciyoshi/redmine-slack](https://github.com/sciyoshi/redmine-slack).
+This plugins is based on [sciyoshi/redmine-slack](https://github.com/sciyoshi/redmine-slack).
 
 ## License
 
