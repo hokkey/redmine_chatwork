@@ -1,24 +1,27 @@
-<p>
-	<label for="settings_token">ChatWork API Token</label>
-	<input type="text" id="settings_token" value="<%= settings['token'] %>" name="settings[token]" required />
-</p>
+<p><b><a href="<%= l(:text_how_to_use_url) %>" target="_blank"><%= l(:text_how_to_use) %></a></b></p>
 
 <p>
-	<label for="settings_room">ChatWork Default Room URL</label>
-	<input type="text" id="settings_room" value="<%= settings['room'] %>" name="settings[room]" required placeholder="https://www.chatwork.com/#!rid0000000" />
+  <label for="settings_token"><%= l(:text_api_token) %></label>
+  <input type="text" id="settings_token" value="<%= settings['token'] %>" name="settings[token]" required style="width:90%"/>
 </p>
 
-<p>
-	The room can be changed on a per-project basis by creating a
-	<a href="/custom_fields/new?type=ProjectCustomField">project custom field</a> named "ChatWork" (without quotes).</strong>
-</p>
+<p><a href="<%= l(:text_api_token_url) %>" target="_blank"><%= l(:text_api_token_desc) %></a></p>
 
 <p>
-	<label for="settings_post_updates">Post Issue Updates?</label>
-	<input type="checkbox" id="settings_post_updates" value="1" name="settings[post_updates]" <%= settings['post_updates'] == '1' ? 'checked="checked"' : '' %> />
+  <label for="settings_room"><%= l(:text_default_room_url) %></label>
+  <input type="text" id="settings_room" value="<%= settings['room'] %>" name="settings[room]" required placeholder="<%= l(:text_default_room_url_placeholder) %>" style="width:90%" />
 </p>
 
+<p><%= l(:text_default_room_url_desc) %><%= l(:text_project_room_desc) %></p>
+
 <p>
-	<label for="settings_post_wiki_updates">Post Wiki Updates?</label>
-	<input type="checkbox" id="settings_post_wiki_updates" value="1" name="settings[post_wiki_updates]" <%= settings['post_wiki_updates'] == '1' ? 'checked="checked"' : '' %> />
+  <label for="settings_post_updates"><%= l(:text_post_issue_update) %></label>
+  <input type="checkbox" id="settings_post_updates" value="1" name="settings[post_updates]" <%= settings['post_updates'] == '1' ? 'checked="checked"' : '' %> />
+</p>
+
+<p><%= l(:text_post_issue_update_desc) %></p>
+
+<p>
+  <label for="settings_post_wiki_updates"><%= l(:text_post_wiki_update) %></label>
+  <input type="checkbox" id="settings_post_wiki_updates" value="1" name="settings[post_wiki_updates]" <%= settings['post_wiki_updates'] == '1' ? 'checked="checked"' : '' %> />
 </p>

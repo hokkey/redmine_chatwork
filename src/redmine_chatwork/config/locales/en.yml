@@ -1,0 +1,13 @@
+en:
+  text_how_to_use: Help
+  text_how_to_use_url: https://github.com/hokkey/redmine_chatwork/
+  text_api_token: ChatWork API token
+  text_api_token_desc: An authnication is required to create the API token.
+  text_api_token_url: https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta.php
+  text_default_room_url: Default room URL
+  text_default_room_url_placeholder: https://www.chatwork.com/#!rid0000000
+  text_default_room_url_desc: A default ChatWork room to notify updates. You must invite the user who has the API token to here.
+  text_project_room_desc: Use project custom field named "ChatWork" to change the destination per project.
+  text_post_issue_update: Notify ticket updates
+  text_post_issue_update_desc: Batch update or updating already posted note won't be notified.
+  text_post_wiki_update: Notify wiki updates

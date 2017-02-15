@@ -1,0 +1,13 @@
+ja:
+  text_how_to_use: 使い方・設定方法
+  text_how_to_use_url: https://github.com/hokkey/redmine_chatwork/
+  text_api_token: ChatWork APIトークン
+  text_api_token_desc: APIトークンの取得には申請が必要です。
+  text_api_token_url: https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta.php
+  text_default_room_url: デフォルトのChatWorkルームURL
+  text_default_room_url_placeholder: https://www.chatwork.com/#!rid0000000
+  text_default_room_url_desc: デフォルトではこのChatWorkルームに通知が送信されます。このルームのメンバーとして、APIトークンを所有するユーザーが招待されている必要があります。
+  text_project_room_desc: プロジェクトごとに投稿先を変更するにはカスタムフィールドを使用します。
+  text_post_issue_update: チケットの更新を通知
+  text_post_issue_update_desc: 既に投稿されている注記の更新や、チケット一覧からの一括更新は通知されません。
+  text_post_wiki_update: Wikiの更新を通知
