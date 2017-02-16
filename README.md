@@ -11,7 +11,7 @@ This plugin notifies updates of Redmine tickets and wiki to your [ChatWork](http
 
 ## Installation
 
-1. [Get your ChatWork API token from the authnication page](https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta_business.php)
+1. [Get your ChatWork API token from the authentication page](https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta_business.php)
 2. Download this repository
 3. Move `src/redmine_chatwork` to your plugins directory
 4. Install `httpclient` by running `bundle install` from the plugin directory
