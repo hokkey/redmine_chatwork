@@ -2,7 +2,7 @@
 
 # Redmine Chatwork
 
-This plugins notifies updates of Redmine tickets and wiki to your [ChatWork](http://www.chatwork.com/) room. You can change settings for each project by creating custom-fields.
+This plugin notifies updates of Redmine tickets and wiki to your [ChatWork](http://www.chatwork.com/) room. You can change settings for each project by creating custom-fields.
 
 ## Compatible with:
 
